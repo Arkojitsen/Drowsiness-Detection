@@ -3,13 +3,13 @@
 This project implements a real-time drowsiness detection system using YOLOv5 and PyTorch.
 A custom dataset is created using a webcam, manually labeled, and trained to detect two classes:
 
-awake
+- awake
 
-drowsy
+- drowsy
 
 The trained model supports image-based detection and real-time webcam inference.
 
-🚀 Features
+# *🚀 Features*
 
 Custom dataset collection using webcam
 
