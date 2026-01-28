@@ -23,7 +23,7 @@ The trained model supports image-based detection and real-time webcam inference.
 
 - CUDA GPU support
 
-🧠 Tech Stack
+# *🧠 Tech Stack*
 
 - Python
 
