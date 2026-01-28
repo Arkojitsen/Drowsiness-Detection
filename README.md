@@ -93,25 +93,6 @@ if cv2.waitKey(10) & 0xFF == ord('q'):
 cap.release()
 cv2.destroyAllWindows()
 
-# *📸 Dataset Collection*
-
-labels = ['awake', 'drowsy']
-number_imgs = 5
-
-Images are captured via webcam and saved under:
-
-data/images/
-
-Each image is stored using a UUID for uniqueness.
-
-# *🏷️ Image Annotation (LabelImg)*
-
-git clone https://github.com/tzutalin/labelImg
-
-pip install pyqt5 lxml --upgrade
-cd labelImg
-pyrcc5 -o libs/resources.py resources.qrc
-
 # *🏋️ Training the Model*
 
 cd yolov5
