@@ -1,4 +1,4 @@
-###💤 Drowsiness Detection using YOLOv5
+*#💤 Drowsiness Detection using YOLOv5*
 
 This project implements a real-time drowsiness detection system using YOLOv5 and PyTorch.
 A custom dataset is created using a webcam, manually labeled, and trained to detect two classes:
