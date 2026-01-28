@@ -1,4 +1,4 @@
-## *💤 Drowsiness Detection using YOLOv5*
+# *💤 Drowsiness Detection using YOLOv5*
 
 This project implements a real-time drowsiness detection system using YOLOv5 and PyTorch.
 A custom dataset is created using a webcam, manually labeled, and trained to detect two classes:
@@ -11,31 +11,31 @@ The trained model supports image-based detection and real-time webcam inference.
 
 # *🚀 Features*
 
-Custom dataset collection using webcam
+- Custom dataset collection using webcam
 
-Manual annotation using LabelImg
+- Manual annotation using LabelImg
 
-Training YOLOv5 on custom data
+- Training YOLOv5 on custom data
 
-Image detection
+- Image detection
 
-Real-time webcam detection
+- Real-time webcam detection
 
-CUDA GPU support
+- CUDA GPU support
 
 🧠 Tech Stack
 
-Python
+- Python
 
-PyTorch
+- PyTorch
 
-YOLOv5
+- YOLOv5
 
-OpenCV
+- OpenCV
 
-NumPy
+- NumPy
 
-Matplotlib
+- Matplotlib
 
 📂 Project Structure
 
@@ -46,7 +46,7 @@ yolov5/
 dataset.yml
 README.md
 
-⚙️ Installation & Setup
+# *⚙️ Installation & Setup*
 1️⃣ Install Dependencies
 
 pip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio===0.8.1
@@ -57,7 +57,7 @@ git clone https://github.com/ultralytics/yolov5
 cd yolov5
 pip install -r requirements.txt
 
-📦 Import Libraries
+# *📦 Import Libraries*
 
 import torch
 import cv2
@@ -68,7 +68,7 @@ from matplotlib import pyplot as plt
 
 model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
 
-🖼️ Image Detection
+# *🖼️ Image Detection*
 
 img = 'image_path_or_url'
 results = model(img)
@@ -77,7 +77,7 @@ results.print()
 plt.imshow(np.squeeze(results.render()))
 plt.show()
 
-🎥 Real-Time Detection (Webcam)
+# *🎥 Real-Time Detection (Webcam)*
 
 cap = cv2.VideoCapture(0)
 
@@ -93,7 +93,7 @@ if cv2.waitKey(10) & 0xFF == ord('q'):
 cap.release()
 cv2.destroyAllWindows()
 
-📸 Dataset Collection
+# *📸 Dataset Collection*
 
 labels = ['awake', 'drowsy']
 number_imgs = 5
@@ -104,7 +104,7 @@ data/images/
 
 Each image is stored using a UUID for uniqueness.
 
-🏷️ Image Annotation (LabelImg)
+# *🏷️ Image Annotation (LabelImg)*
 
 git clone https://github.com/tzutalin/labelImg
 
@@ -112,13 +112,13 @@ pip install pyqt5 lxml --upgrade
 cd labelImg
 pyrcc5 -o libs/resources.py resources.qrc
 
-🏋️ Training the Model
+# *🏋️ Training the Model*
 
 cd yolov5
 python train.py --img 320 --batch 16 --epochs 500
 --data dataset.yml --weights yolov5s.pt --workers 2
 
-📥 Load Custom Trained Model
+# *📥 Load Custom Trained Model*
 
 model = torch.hub.load(
 'ultralytics/yolov5',
@@ -127,7 +127,7 @@ path='yolov5/runs/train/exp15/weights/last.pt',
 force_reload=True
 )
 
-✅ Test Custom Model
+# *✅ Test Custom Model*
 
 img = 'data/images/sample.jpg'
 results = model(img)
@@ -136,7 +136,7 @@ results.print()
 plt.imshow(np.squeeze(results.render()))
 plt.show()
 
-🖥️ Real-Time Detection (Custom Model)
+# *🖥️ Real-Time Detection (Custom Model)*
 
 cap = cv2.VideoCapture(0)
 
@@ -152,29 +152,29 @@ if cv2.waitKey(10) & 0xFF == ord('q'):
 cap.release()
 cv2.destroyAllWindows()
 
-📊 Classes
+# *📊 Classes*
 
-awake
+- awake
 
-drowsy
+- drowsy
 
-📌 Future Improvements
+# *📌 Future Improvements*
 
-Increase dataset size
+- Increase dataset size
 
-Improve low-light performance
+- Improve low-light performance
 
-Deploy on edge devices
+- Deploy on edge devices
 
-Integrate eye-aspect ratio (EAR)
+- Integrate eye-aspect ratio (EAR)
 
-🙌 Acknowledgements
+# *🙌 Acknowledgements*
 
-Ultralytics YOLOv5
+- Ultralytics YOLOv5
 
-PyTorch Community
+- PyTorch Community
 
-👨‍💻 Author
+# *👨‍💻 Author*
 
 Arkojit Sen
 
